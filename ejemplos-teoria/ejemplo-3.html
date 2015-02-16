@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Ejemplo JavaScript de operadores de comparacion</h1>
+<script>
+    var x = 5;
+    
+    document.write("<p>Test logicos sobre la variable x=" + x +"</p>");
+    document.write("<p>IGUAL A (x == 5) : " + (x==5) + " ==> TRUE porque el ambos lados son iguales</p>");
+    document.write("<p>IGUAL A (x == 6): " + (x==6) + " ==> FALSE porque ambos lados NO son iguales</p>");
+    document.write("<p>IGUAL A (x == '5') : " + (x=="5") + " ==> TRUE porque JS convierte 'x' a String antes de operar)</p>");
+
+    document.write("<p>IGUAL VALOR & TIPO (x === 5) : " + (x===5) + " ==> TRUE porque ambos lados tienen mismo valor y tipo</p>");
+    document.write("<p>IGUAL VALOR & TIPO (x === 6) : " + (x===6) + " ==> FALSE porque los valores NO son iguales</p>");
+    document.write("<p>IGUAL VALOR & TIPO (x === '5') : " + (x==="5") + " ==> FALSE porque los tipos NO son iguales</p>");
+
+    document.write("<p>NO ES IGUAL (x != 5) : " + (x!=5) + " ==> FALSE porque ambos lados NO son distintos</p>");
+    document.write("<p>NO ES IGUAL (x != 6) : " + (x!=6) + " ==> TRUE porque ambos lados son distintos</p>");
+    
+    document.write("<p>NO ES IGUAL VALOR & TIPO (x !== 5) : " + (x!==5) + " ==> FALSE porque ambos lados NO son distintos ni valor ni tipo</p>");
+    document.write("<p>NO ES IGUAL VALOR & TIPO (x !== '5') : " + (x!=="5") + " ==> TRUE porque el tipo es distinto</p>");
+    document.write("<p>NO ES IGUAL VALOR & TIPO (x !== 6) : " + (x!==6) + " ==> TRUE porque el valor es distinto</p>");
+    document.write("<p>NO ES IGUAL VALOR & TIPO (x !== '6') : " + (x!=="6") + " ==> TRUE porque el valor es distinto</p>");
+    
+    document.write ("<p> EJERCICIO: (x == '05') " + (x=="05") + "</p>");
+
+    
+</script>
+</body>
+</html>

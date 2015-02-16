@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        function csaai () {
+            this.id = Math.random();
+            
+            this.update = function (value) {
+                var display = document.getElementById(this.id);
+                if (display === null) {
+                    display = this.create();
+                }
+                display.innerHTML = "EL ultimo valor es: " + value;
+            }
+            
+            this.create = function () {
+                var c = document.getElementById("content");
+                
+                var parrafo = document.createElement("p");
+                parrafo.id=this.id;
+                c.appendChild(parrafo);
+                return parrafo;
+            }
+        }
+        
+        function enfoco() {
+            obj = document.getElementById("entrada");
+            obj.style.backgroundColor="yellow";
+        }
+        
+        function enblur() {
+            obj = document.getElementById("entrada");
+            obj.style.backgroundColor = "white";
+            if ( obj.csaai === undefined) {
+                obj.csaai = new csaai()
+            }
+            obj.csaai.update(obj.value);
+        }
+        
+        
+        </script>
+    </head>
+    <body>
+        <h1>Ejercicio 10</h1>
+        <h2>Objectivo</h2>
+        <p>Comprender el manejo de objetos en Javascript y el caracter dinamico de estos</p>
+        
+        <p>Campo: <input id="entrada" onfocus="enfoco()" onblur="enblur()" type="text"/><span/></p>
+        
+        <div id="content"/>
+        
+        <!-- EJERCICIO: Añadir multiples campos al formulario y gestionar el valor de cada uno
+        independientemente del resto, enlazando cada entrada con su display -->
+
+    </body>
+</html>

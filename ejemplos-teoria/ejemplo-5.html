@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script>
+    var clickCounter=0;
+    function alpulsar(){
+        var container = document.getElementById("pulsame");
+        container.innerHTML="Has pulsado el boton";
+        // EJERCICIO: Añadir un contador de pulsaciones
+        container.innerHTML="Has pulsado el boton:" + (++clickCounter) + " veces" ;        
+
+    }
+    
+    function enfoco() {
+        var container = document.getElementById("tinput");
+        container.style.background="yellow";
+    }
+    
+    function nofoco() {
+        var container = document.getElementById("tinput");
+        container.style.background="white";
+    }
+    
+    function agranda(x) {
+        x.style.height = "150px" ;
+    }
+    function reduce(x) {
+        x.style.height = "100px" ;
+    }
+    
+    </script>
+    </head>
+<body>
+    <p><strong>Ejemplo onclick:</strong> Al pulsar el boton se dispara el evento onclick</p>
+    <button onclick="alpulsar()">Pulsame</button>
+    <p id="pulsame"></p>
+    
+    <p><strong>Ejemplo onfocus:</strong> Se dispara el evento cuando el cuadro de texto obtiene el foco</p>
+    <input id="tinput" type="text" onfocus="enfoco()" onblur="nofoco()">
+    <!-- EJERCICIO: Eliminar el estilo al perder el foco con el evento onblur -->
+
+    <p>
+    
+    <p><strong>Ejemplo resize:</strong> Modificar las dimensiones de un elemento</p>
+    <img id="resizable" src="http://www.urjc.es/urjcMain/imagenesMain/logoURJC.jpg"
+         style="height:100px;" onmouseover="agranda(this)" onmouseout="reduce(this)">
+    <!-- EJERCICIO: recuperar el tamaño de la imagen al sacar el raton fuera de su area. Usar el evento onmouesout -->
+         
+</body>
+</html>

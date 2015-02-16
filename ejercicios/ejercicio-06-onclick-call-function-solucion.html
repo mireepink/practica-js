@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Ejercicio 6</h1>
+        <h2>Objectivo</h2>
+        <p>Comprender como los eventos se relacionan con las modificaciones del arbol DOM. Varios eventos pueden actuar sobre los mismos objetos</p>
+        <p>En concreto se pueden modificar imagenes</p>
+        
+        <img id="bulb" src="02-bulb-off.png">
+        <img id="imagen" onclick="cambiaImagen()" src="02-off.png" width="100" height="100">
+
+        <p>Pulso el boton para encender y apagar</p>
+        <script>
+            function cambiaImagen() {
+                var image = document.getElementById('imagen');
+                var bulb = document.getElementById('bulb');
+                if (image.src.match("02-off.png")) {
+                    image.src = "02-on.png";
+                    bulb.src="02-bulb-on.png";
+                } else {
+                    image.src = "02-off.png";
+                    bulb.src = "02-bulb-off.png";
+                }
+            }
+        </script>
+        
+        <!-- EJERCICIO: Añadir la imagen 02-bulb-off.png junto al boton 02-off.png y cambiarla
+        por 02-bulb-on.png cuando la imagen mustrada sea 02-on.png --> 
+    </body>
+</html>

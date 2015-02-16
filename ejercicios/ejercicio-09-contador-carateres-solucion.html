@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function count() {
+                _cuenta.innerHTML=_texto.value.length + 1;
+            }
+        </script>
+    </head>
+    <body>
+        <!--
+        EJERCICIO: Mostrar en _cuenta el numero de caracteres escritos en
+        _texto
+        -->
+        <p style="border:1px;">Caracteres:<span id="_cuenta">0</span></p>
+        <textarea id="_texto" cols="50" rows="4" onkeypress="count()"></textarea>
+    </body>
+</html>

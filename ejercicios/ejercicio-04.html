@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function agranda(x) {
+                x.style.height = "150px" ;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Ejercicio 4</h1>
+        <h2>Objectivo</h2>
+        <p>Comprender como es posible modificar la estructura DOM desde Javascript</p>
+       
+        <h1>Ejercicio</h1>
+        <!-- El siguiente ejemplo muestra como es posible modificar el tamaÒo de una imagen de forma dinamica -->
+        <img id="resizable" src="http://www.urjc.es/urjcMain/imagenesMain/logoURJC.jpg" style="height:100px;"
+         onmouseover="agranda(this)"/>
+        
+        <!-- EJERCICIO: Recuperar el tamaño original cuando el raton se desplaza fuera de la imagen -->
+
+    </body>
+</html>

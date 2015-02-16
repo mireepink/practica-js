@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <script>
+            var result = 0;
+            var operator ="";
+            function digit(n) {
+                operator = operator + n ;
+                if (display.innerHTML == "0" || result == 0) {
+                    display.innerHTML = n
+                } else {
+                    display.innerHTML += n;
+                }
+            }
+            function mas() {
+                result += (1*operator);
+                operator ="";
+                display.innerHTML += " + ";
+
+            }
+            function igual(){
+                result += (1*operator);
+                operator ="";
+                display.innerHTML = result;
+                result = 0;
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div style="width:125px">
+        <p id="display" style="border:solid;text-align:right">0</p>
+        <button onclick="digit(1)">1</button>
+        <button onclick="digit(2)">2</button>
+        <button onclick="digit(3)">3</button>
+        <br>
+        <button onclick="digit(4)">4</button>
+        <button onclick="digit(5)">5</button>
+        <button onclick="digit(6)">6</button>
+        <button onclick="mas()">+</button>
+        <br>
+        <button onclick="digit(7)">7</button>
+        <button onclick="digit(8)">8</button>
+        <button onclick="digit(9)">9</button>
+        <button onclick="igual()">=</button>
+        </div>
+    </body>
+</html>

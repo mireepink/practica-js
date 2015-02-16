@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Ejercicio 7</h1>
+        <h2>Objectivo</h2>
+        <p>Comprender como Javascript puede ser usado para validar el modelo de datos generado por un formulario</p>
+
+        <p>Introducir un numero entre 1 y 10</p>
+        <input id="numero" type="text">
+        <button type="button" onclick="submit()">Submit</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function submit() {
+                var x, text;
+
+                x = document.getElementById("numero").value;
+
+                if (isNaN(x) || x < 1 || x > 10 ) {
+                    text = "Valor incorrecto";
+                } else {
+                    text = "Valor correcto";
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+        </script>
+        
+        <!-- EJERCICIO: A–adir otro campo de entrada en el que se pedira
+        introducir un numero entre 11 y 20. Verificar ambos valores de
+        forma simultanea. -->
+        
+    </body>
+</html> 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <!--
+        EJERCICIO: Construir un cronómetro basado en Javascript
+        
+        1.- Asociar el inicio de un temporizador de 1 segundo  a la pulsacion
+        del boton "START".
+        
+        2.- Incrementar la cuenta del cronometro en cada ciclo del temporizador. El
+        segundero debe inciar la cuenta al llegar a 59, al igual que el minutero
+        
+        3.- Asociar la parada del temporizador a la pulsacion del boton STOP.
+        En concreto se solicita terminar el temporizador
+        
+        4.- Implementar un mecanismo para reiniciar el cronometro cada vez que
+        se inicia la cuenta
+        
+        5.- ¿Que ocurre si se pulsa varias veces el boton START?. Impida el inicio
+        de varios contadores simultaneos verificando el estado del cronometro
+        
+        6.- Reforzar visualmente el estado del contador deshabilitando el estado del
+        boton cuya accion no se puede ejecutar: No se puede iniciar mientras cuenta,
+        ni parar si esta parado.
+        
+        -->
+        <div style="text-align:center;">
+            <p id="display"><span id="_mins">00</span>:<span id="_secs">00</span></p>
+            <button id="_start">start</button>
+            <button id="_stop">stop</button>
+        </div>
+    </body>
+</html>

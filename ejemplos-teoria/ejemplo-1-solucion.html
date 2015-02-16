@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        /*
+        Este codigo se evalua durante la carga de la pagina.
+        El nuevo elemento se a–ade al documento que est‡ siendo
+        procesado
+        */
+            document.write("<h1>Ejemplo Javascript</h1>");
+        </script>
+    </head>
+<body>
+<p>Demuestra la interaccion del codigo JS con el arbol DOM
+durante la carga de una pagina
+</p>
+
+<script>
+/*
+  Este codigo se evalua durante la carga de la pagina.
+  El nuevo elemento se a–ade al documento que est‡ siendo
+  procesado
+*/
+
+document.write("<p>Hello World from JavaScript</p>");
+
+// EJERCICIO: A–adir una imagen usando codigo Javascript
+document.write("<img src='http://www.urjc.es/urjcMain/imagenesMain/logoURJC.jpg'><p>")
+</script>
+
+
+<button onclick="myFunction()">Una trampa mortal</button>
+
+<script>
+function myFunction()
+{
+    /*
+      Si el documento ya esta procesado se sobreescribe, es decir,
+      El documento se destruye y se crea uno nuevo con el nuevo
+      componente
+    */
+    document.write("Oops! Donde esta el documento?");
+}
+</script>
+
+<p>Fin del ejemplo</p>
+
+</body>
+</html>

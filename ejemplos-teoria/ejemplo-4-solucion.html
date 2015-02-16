@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+<body>
+    <h1>Ejemplo JavaScript: Acceso al arbol DOM</h1>
+    <p>En este ejemplo se mostrara la capacidad de JavaScript para
+    acceder a la representacion DOM de un documento HTML</p>
+    <p>Este parrafo muestra varios enlaces a la
+        <a id="enlaceurjc" href="http://www.urjc.es">urjc</a>:
+        <a id="enlacebiblio" href="http://www.urjc.es/bilioteca">la biblioteca</a>,
+        <a id="enlaceportal" href="http://miportal.urjc.es">el potal de servicios</a> y
+        <a id="enlacecampus" href="">el campus virtual</a>
+    </p>
+    <p id="prueba" >Tambien se incoropora un <a id="ancla" name="avacio" >ancla vacio</a></p>
+    <p id="todel">Este parrafo no debe aparecer</p>
+    <div id="resumen" class="container"></div>
+    
+    <script>
+    // 1- Encuentra elementos por su id
+    var resumen = document.getElementById("resumen");
+    // EJERCICIO: Encuentra el elemento identificado por prueba
+    var prueba = document.getElementById("prueba");
+
+    // 2- Modifica el HTML de un elemento
+    resumen.innerHTML="<h1>Resumen del ejemplo</h1>";
+    // EJERCICIO: Muestra el contenido del elemento prueba
+    document.write("<p>CONTENIDO PRUEBA: '" + prueba.innerHTML + "'</p>");
+    
+    // 3- A–ade un nodo a un elemento DOM
+    var parrafo = document.createElement("p");
+    parrafo.innerHTML="Modificacion: Nuevo nodo un elemento del arbol DOM";
+    resumen.appendChild(parrafo);
+    
+    // EJERCICIO: Elimina el elemento "todel". Usa el metodo node.parentNode.removeChild
+    var todel = document.getElementById("todel");
+    todel.parentNode.removeChild(todel);
+    
+    // 4- Cuenta elementos
+    parrafo = document.createElement("p");
+    parrafo.innerHTML="El numero de enlaces es: " + document.links.length; 
+    resumen.appendChild(parrafo);
+    
+    // EJERCICIO: DOM diferencia entre links y anchors en funcion del atributo href
+    // Imprime el numero de anchors (Elementos <a> sin atributo href) en este documento
+    parrafo = document.createElement("p");
+    parrafo.innerHTML="El numero de anclas es: " + document.anchors.length; 
+    resumen.appendChild(parrafo);
+
+    // 5- Modificar atributos
+    var campus = document.getElementById("enlacecampus");
+    campus.href="http://www.campusvirtual.urjc.es";
+    
+    // EJERCICIO: Modificar el estilo del resumen para que se imprima en rojo
+    resumen.style.color="red";
+
+    // EJERCICIO: Muestra el valor de atributo name del elemento "ancla"
+    var ancla = document.getElementById("ancla");
+    document.write("<p>El valor del att name del element ancla es: '" + ancla.name + "'");
+    
+    </script>
+</body>
+</html>

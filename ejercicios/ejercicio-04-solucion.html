@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function agranda(x) {
+                x.origHeight = x.style.height;
+                x.style.height = "150px" ;
+            }
+            function reduce(x) {
+                x.style.height = x.origHeight;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Ejercicio 4</h1>
+        <h2>Objectivo</h2>
+        <p>Comprender como es posible modificar la estructura DOM desde Javascript</p>
+       
+        <h1>Ejercicio</h1>
+        <!-- El siguiente ejemplo muestra como es posible modificar el tamaÒo de una imagen de forma din·mica -->
+        <img id="resizable" style="height:10px;" src="http://www.urjc.es/urjcMain/imagenesMain/logoURJC.jpg" style="height:100px;"
+         onmouseover="agranda(this)" onmouseout="reduce(this)"/>
+        <p/>
+        <img id="resizable" style="height:50px;" src="http://www.urjc.es/urjcMain/imagenesMain/logoURJC.jpg" style="height:100px;"
+         onmouseover="agranda(this)" onmouseout="reduce(this)"/>
+         <p/>
+       <img id="resizable" style="height:100px;" src="http://www.urjc.es/urjcMain/imagenesMain/logoURJC.jpg" style="height:100px;"
+         onmouseover="agranda(this)" onmouseout="reduce(this)"/>
+         <p/>
+       <img id="resizable" style="height:150px;" src="http://www.urjc.es/urjcMain/imagenesMain/logoURJC.jpg" style="height:100px;"
+         onmouseover="agranda(this)" onmouseout="reduce(this)"/>
+         <p/>
+       <img id="resizable" style="height:200px;" src="http://www.urjc.es/urjcMain/imagenesMain/logoURJC.jpg" style="height:100px;"
+         onmouseover="agranda(this)" onmouseout="reduce(this)"/>
+         <p/>
+       <img id="resizable" style="height:250px;" src="http://www.urjc.es/urjcMain/imagenesMain/logoURJC.jpg" style="height:100px;"
+         onmouseover="agranda(this)" onmouseout="reduce(this)"/>
+        
+        <!-- EJERCICIO: Recuperar el tamaÒo original cuando el ratÛn se desplaza fuera de la imagen -->
+
+    </body>
+</html>

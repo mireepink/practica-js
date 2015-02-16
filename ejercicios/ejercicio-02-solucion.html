@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var pulsaciones = 0
+            function alpulsar(){
+                var container = document.getElementById("parrafo");
+                container.innerHTML="Has pulsado el boton:" + ++pulsaciones + " veces";        
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Ejercicio 2</h1>
+        <h2>Objectivo</h2>
+        <p>Manejo de variables globales</p>
+        
+        <h1>Ejercicio</h1>
+        <!-- Modificar el contenido del elemento 'parrafo' al pulsar el boton-->
+        <!-- Añadir in contador que indique el numero de pulsaciones realizadas -->
+        <button onclick="alpulsar()">Pulsame</button>
+        <p id="parrafo"></p>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        
+            var xCursor=0;
+            var yCursor=0;
+
+            var xOffset=0;
+            var yOffset=0;
+            
+            var draging=false;
+            
+            function dragit(ev) {
+                xCursor=ev.clientX;
+                yCursor=ev.clientY;
+                
+                if (draging) {
+                    _dragable.style.top= ev.clientY + 'px';//( yCursor - yOffset ) + "px";
+                    _dragable.style.left= ev.clientX + 'px';//( xCursor- xOffset ) + "px";
+                }
+            }
+        
+            function grab() {
+                if (draging )
+                    return;
+                draging = true;
+                /*
+                xOffset= xCursor - _dragable.offsetLeft
+                yOffset = yCursor - _dragable.offsetTop
+                */
+            }
+            
+            function release () {
+                draging = false;
+            }
+        </script>
+        
+        
+    </head>
+    <body onmousemove="dragit(event)">
+        <!--
+        EJERCICIO: Implementar un mecanismo de drag & drop basado en javascript
+        
+        1.- Obtener la posición del cursor mediante el uso de javascript.
+        
+        2.- Detectar cuando se pulsa el boton del raton dentro de los limites del elemento "dragable"
+        
+        3.- Modificar la posición del elemento drabable de tal forma que siga los movimientos del
+        cursor cuando el boton se encuentre pulsado
+        
+        -->
+        <div id="_dragable" onmousedown="grab()" onmouseup="release()"
+             style="position:relative;width:50px;height:50px;background-color:Red;"></div>   
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Ejemplo JavaScript: Variables y conversion</h1>
+
+
+<script>
+    /*
+     El objetivo de este ejemplo es mostrar como el interprete
+     de JavaScript modifica din‡micamente el tipo de las variables
+     para ajustar las operaciones
+    */
+    var x = new Number;
+    var y = new Number;
+    var z = new Number;
+
+    x = 1;
+    y = 5;
+    z = x+y;
+    // Todas las variables se mantienen como Number y el operador +
+    // se interpreta como suma aritmetica
+    document.write ("<p>Suma aritmetica: z = x + y : " + x + "+" + y + " = " + z);
+    
+    // x se convierte a String para soportar el operador de asignacion
+    x= "a";
+    y= 5;
+    document.write("<p>Conversion implicita por asignacion: x=" + x + ", y=" + y);
+    
+    // z e y se convierten a String para soportar el operador + con x
+    z = x + y;
+    document.write("<p>Conversion implicita por operacion: z = x + y : " +z );
+    
+    // z e y siguen siendo Number. La conversion implicita crea copias
+    // de las variables y deja inalterado los originales
+    z = y + y;
+    document.write("<p>Z e Y siguen siendo numeros: z = y + y : " + z + " = " + y +"+"+y);
+    
+    // EJERCICIO: Como se interpreta el operador + cuando un operando es un string
+    // representando un numero
+    document.write ("<p>EJERCICIO:</p>");
+    x="5";
+    y=5;
+    z = x + y
+    document.write ("<p> x=\"5\", y=5: x+y? : "+z+"</p>")
+    
+    // EJERCICIO: La multiplicacion es un operador aritmetico que no esta sobrecargado
+    // para el tipo String. Que ocurre cuando se operan String y Number?
+    document.write ("<p>EJERCICIO:</p>");
+
+    // CASO 1: El string representa un numero x="5", y=5; x*y? 
+    x="5";
+    y=5;
+    z= x*y;
+    document.write("<p>CASO 1: x=\"5\", y=5: x*y? : z = x*y ="+z+"</p>");
+    
+    // CASO 2: El string no representa un numnero x="a", y=5; x*y?
+    x="a";
+    y=5;
+    z= x*y;
+    document.write("<p>CASO 2: x=\"5\", y=5: x*y? : z = x*y = "+z+" </p>");
+    
+    // EJERCICIO: La suma artimetica y la concatenacion presentan la misma propiedad
+    // Esto obliga a agrupar terminos para diferencia un operador del otro
+    // Conseguir mostrar el resultado de una suma aritmetica dentro de una expresion
+    // en la que existe concatenacion
+    document.write ("<p>EJERCICIO:</p>");
+
+    document.write("<p>El resultado incorrecto de la suma es : x + y = " + x + y +"   :(</p>");
+    document.write("<p>El resultado correcto de la suma es : x + y = ???? :)</p>");
+
+</script>
+</body>
+</html>
